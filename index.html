@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganya Bhatti | Marketing & Decision Science | Portfolio</title>
+    <meta name="description" content="Portfolio of Ganya Bhatti — 4th year Business Administration student at SFSU concentrating in Marketing & Decision Science. Seeking full-time marketing or entry-level data analytics roles starting June 2027.">
+    <link rel="stylesheet" href="style.css?v=20261029_1508">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- INTERACTIVE OVERLAYS & PROGRESS TRACKER -->
+    <div id="scroll-progress-bar" aria-hidden="true"></div>
+    <div id="camera-flash-overlay" aria-hidden="true"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- FIXED BACKGROUND: Diagonal Film Strip -->
+    <div class="fixed-bg" aria-hidden="true">
+        <div class="film-container-diagonal">
+            <div class="film-strip-diagonal">
+                <div class="frames-container-diagonal">
+                    <div class="frame">
+                        <div class="photo-wrapper">
+                            <img src="assets/ganya_sunset_hero.jpg" alt="Ganya Bhatti sunset portrait - Canva Slide 1" class="photo">
+                        </div>
+                    </div>
+                    <div class="frame">
+                        <div class="photo-wrapper">
+                            <img src="assets/ganya_dress_hero.jpg" alt="Ganya Bhatti black dress portrait - Canva Slide 2" class="photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK VINTAGE STAMP NAVIGATION -->
+    <nav class="vintage-nav" id="top-nav">
+        <div class="nav-brand">GANYA BHATTI</div>
+        <div class="nav-links">
+            <a href="#about" class="nav-pill">about</a>
+            <a href="#bag" class="nav-pill">in my bag</a>
+            <a href="#experience" class="nav-pill">experience</a>
+            <a href="#projects" class="nav-pill nav-pill-featured">projects & video</a>
+            <a href="#flyers" class="nav-pill">flyers</a>
+            <a href="#reels" class="nav-pill">short reels</a>
+            <a href="#leadership" class="nav-pill">leadership</a>
+            <a href="#toolkit" class="nav-pill">toolkit</a>
+            <a href="#certificates" class="nav-pill">credentials</a>
+            <a href="#testimonials" class="nav-pill">testimonials</a>
+            <a href="#guestbook" class="nav-pill">guestbook ✨</a>
+            <a href="#contact" class="nav-pill nav-pill-highlight">contact</a>
+        </div>
+    </nav>
+
+    <!-- MAIN SCROLLING CONTENT -->
+    <div id="app">
+        
+        <!-- SECTION 1: Hero (transparent to show diagonal film strip background) -->
+        <section class="section-hero">
+            <div class="scroll-text">
+                <span>s</span><span>c</span><span>r</span><span>o</span><span>l</span><span>l</span>
+                <span class="scroll-arrow">↓</span>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Scrapbook Layout -->
+        <section class="section-scrapbook" id="scrapbook">
+            <!-- Floating Scrapbook Elements (Draggable & Interactive) -->
+            <img src="cola_can.jpg" alt="Vintage Cola Can" class="float-item cola draggable" title="✨ Drag me around!">
+            <img src="assets/canva_camera_transparent.png" alt="Ganya's Canva Blue Digital Camera" class="float-item camera draggable" id="interactive-camera" title="📸 Click to Snap! Or drag me around!" onclick="snapCameraPhoto(event);">
+            <img src="ribbon.jpg" alt="Red Ribbon" class="float-item ribbon draggable" title="✨ Drag me around!">
+            <img src="clock.jpg" alt="Vintage Clock" class="float-item clock draggable" title="✨ Drag me around!">
+            <img src="handbag.jpg" alt="Red Handbag" class="float-item handbag draggable" title="✨ Drag me around!">
+            <img src="sunglasses.jpg" alt="Red Sunglasses" class="float-item sunglasses draggable" title="✨ Drag me around!">
+            
+            <div class="main-content-scrapbook">
+                <!-- Horizontal Film Strip -->
+                <div class="film-strip-horizontal">
+                    <div class="frames-container-horizontal">
+                        <div class="frame" onclick="openLightbox('assets/ganya_sunset_hero.jpg', 'Ganya Bhatti — Sunset Sky & Golden Hour (Canva Slide 1)')" title="Click to view full photo">
+                            <div class="photo-wrapper">
+                                <img src="assets/ganya_sunset_hero.jpg" alt="Ganya Bhatti sunset portrait - Canva Slide 1" class="photo">
+                            </div>
+                        </div>
+                        <div class="frame" onclick="openLightbox('assets/ganya_dress_hero.jpg', 'Ganya Bhatti — Black Glitter Dress Portrait (Canva Slide 2)')" title="Click to view full photo">
+                            <div class="photo-wrapper">
+                                <img src="assets/ganya_dress_hero.jpg" alt="Ganya Bhatti black dress portrait - Canva Slide 2" class="photo">
+                            </div>
+                        </div>
+                        <div class="frame" onclick="openLightbox('assets/ganya_jeep_hero.jpg', 'Ganya Bhatti — Campus Life & White Jeep (Canva Slide 11)')" title="Click to view full photo">
+                            <div class="photo-wrapper">
+                                <img src="assets/ganya_jeep_hero.jpg" alt="Ganya Bhatti by white Jeep - Canva Slide 11" class="photo">
+                            </div>
+                        </div>
+                        <div class="frame" onclick="openLightbox('assets/ganya_coat_hero.jpg', 'Ganya Bhatti — Nature Walkway Bridge (Canva Slide 11)')" title="Click to view full photo">
+                            <div class="photo-wrapper">
+                                <img src="assets/ganya_coat_hero.jpg" alt="Ganya Bhatti nature walkway - Canva Slide 11" class="photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="brand-box">
+                    ganya bhatti
+                </div>
+
+                <!-- Hero Headlines Requested by User -->
+                <div class="scrapbook-headlines">
+                    <h1 class="main-tagline">2 majors, 4 roles, one driven mindset</h1>
+                    <div class="subline-tape">
+                        <span class="tape-pin">📌</span> From India to SFSU
+                    </div>
+                    <p class="motto-handwritten">"Romanticizing the little things, always! ✨"</p>
+                    <div class="scrapbook-interactive-hint">
+                        <span>📸 Click the blue camera to snap a memory • Stickers are draggable!</span>
+                    </div>
+                </div>
+                
+                <a href="#about" class="click-more">
+                    <svg width="40" height="20" viewBox="0 0 40 20" aria-hidden="true">
+                        <path d="M5,5 Q20,20 35,10" fill="none" stroke="#7b1d18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25,5 L35,10 L30,20" fill="none" stroke="#7b1d18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>click here to find out more</span>
+                    <svg width="40" height="20" viewBox="0 0 40 20" aria-hidden="true">
+                        <path d="M35,5 Q20,20 5,10" fill="none" stroke="#7b1d18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15,5 L5,10 L10,20" fill="none" stroke="#7b1d18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- WHAT I'M LOOKING FOR BANNER / CALLOUT -->
+        <section class="section-opportunity" id="opportunity">
+            <div class="opportunity-card">
+                <div class="stamp-badge">SPRING 2027 GRAD</div>
+                <div class="opportunity-content">
+                    <div class="opportunity-header">
+                        <span class="opp-label">what i'm looking for</span>
+                        <h2 class="opp-title">Seeking Full-Time Marketing or Entry-Level Data Analytics Roles</h2>
+                    </div>
+                    <p class="opp-text">
+                        Graduating in <strong>Spring 2027</strong> from San Francisco State University with a dual concentration in <strong>Marketing</strong> and <strong>Decision Science</strong>. Available and actively interviewing for full-time opportunities starting <strong>June 2027</strong>.
+                    </p>
+                    <div class="opp-badges">
+                        <span class="opp-pill">📍 SF Bay Area & Hybrid / Remote</span>
+                        <span class="opp-pill">🗓️ Starting June 2027</span>
+                        <span class="opp-pill">📊 Marketing & Data Analytics</span>
+                        <span class="opp-pill">🌏 Work Authorized</span>
+                    </div>
+                    <div class="opp-actions">
+                        <a href="mailto:ganyabhatti5@gmail.com?subject=Full-time%20Role%20Inquiry%20-%20June%202027" class="btn-primary">
+                            <span>Get in Touch</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="http://linkedin.com/in/ganyabhatti5" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: About Me (transparent to show background film strip) -->
+        <section class="section-about" id="about">
+            <div class="about-box">
+                <div class="about-left">
+                    <div class="about-photo-wrapper">
+                        <img src="assets/ganya_about_dress.png" alt="Ganya Bhatti" class="about-photo">
+                        <div class="photo-caption">Ganya Bhatti • SFSU '27</div>
+                    </div>
+                    
+                    <div class="social-box">
+                        <a href="mailto:ganyabhatti5@gmail.com" class="social-item" title="Personal Email">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span>ganyabhatti5@gmail.com</span>
+                        </a>
+                        <div class="social-divider"></div>
+                        <a href="mailto:gbhatti@sfsu.edu" class="social-item" title="University Email">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 13.5l-7-3.18V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-4.68l-7 3.18z"/></svg>
+                            <span>gbhatti@sfsu.edu</span>
+                        </a>
+                        <div class="social-divider"></div>
+                        <a href="http://linkedin.com/in/ganyabhatti5" target="_blank" rel="noopener noreferrer" class="social-item" title="LinkedIn Profile">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <span>/in/ganyabhatti5</span>
+                        </a>
+                        <div class="social-divider"></div>
+                        <a href="tel:+17077208331" class="social-item" title="Phone">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <span>+1 707-720-8331</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-right">
+                    <h2>about me</h2>
+                    <p class="about-lead">
+                        I am a 4th-year Business Administration student at <strong>San Francisco State University</strong> with a dual concentration in <strong>Marketing</strong> and <strong>Decision Science</strong>.
+                    </p>
+                    <p class="about-p">
+                        As an international student from India, my journey is driven by an unwavering passion for leadership, community building, creative storytelling, and nurturing inclusive spaces where everyone feels empowered.
+                    </p>
+                    <p class="about-p">
+                        Across 11 distinct campus & organizational roles, I bring deep hands-on expertise in <strong>event coordination, multi-channel promotion, audience engagement, digital marketing, and impactful content creation</strong>. I love translating quantitative insights into compelling narratives that drive real student engagement and institutional growth.
+                    </p>
+                    <div class="outside-work-box">
+                        <span class="outside-title">Outside work & academics:</span>
+                        <p class="outside-text">Fitness & wellness • Exploring new food spots across San Francisco • Immersing in Northern California nature & trails • Creative expression in all its forms.</p>
+                    </div>
+                    <div class="about-hr"></div>
+                    <p class="about-tags">marketing • decision science • community builder • leadership • digital campaigns • inclusive spaces • storytelling</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3.5: What's in My Bag? (Canva Slide 5) -->
+        <section class="section-bag" id="bag">
+            <div class="bag-container">
+                <div class="category-header">
+                    <div class="category-title-pill">what's in my bag?</div>
+                    <p class="category-subtitle">everyday essentials that keep me organized, inspired & ready for action</p>
+                </div>
+
+                <div class="bag-content-wrapper">
+                    <div class="bag-image-card" onclick="openLightbox('assets/ganya_whats_in_my_bag.png', 'What\'s In My Bag? — Everyday Essentials by Ganya Bhatti')">
+                        <div class="tape-corner"></div>
+                        <img src="assets/ganya_whats_in_my_bag.png" alt="What's In My Bag Flatlay by Ganya Bhatti" class="bag-flatlay-img">
+                        <div class="zoom-overlay">
+                            <span class="zoom-icon">🔍</span>
+                            <span>Click to Enlarge Essentials</span>
+                        </div>
+                    </div>
+
+                    <div class="bag-items-grid">
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">01</span>
+                            <div class="bag-item-text">
+                                <h5>Canon DSLR Camera</h5>
+                                <p>For capturing campus events, promotional b-roll, and spontaneous memories.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">02</span>
+                            <div class="bag-item-text">
+                                <h5>Daily Planner & Muji Pens</h5>
+                                <p>Keeping 4 concurrent roles, 2 majors, and event timelines on track.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">03</span>
+                            <div class="bag-item-text">
+                                <h5>Noise-Cancelling Headphones</h5>
+                                <p>My soundtrack for deep focus during data modeling and video editing.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">04</span>
+                            <div class="bag-item-text">
+                                <h5>MacBook Pro & iPad</h5>
+                                <p>Running Canva, Tableau, Salesforce Pardot, Excel, and creative workflows.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">05</span>
+                            <div class="bag-item-text">
+                                <h5>Hydro Flask with Stickers</h5>
+                                <p>Hydrated across long days traversing campus and Northern California trails.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">06</span>
+                            <div class="bag-item-text">
+                                <h5>SPF 50 & Lip Tint</h5>
+                                <p>Quick touch-ups between classes, meetings, and evening student events.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">07</span>
+                            <div class="bag-item-text">
+                                <h5>Portable Power Bank</h5>
+                                <p>Zero low-battery anxiety during 12-hour event productions and outdoor trips.</p>
+                            </div>
+                        </div>
+                        <div class="bag-item-card">
+                            <span class="bag-item-num">08</span>
+                            <div class="bag-item-text">
+                                <h5>Gator Pass & Clipper Card</h5>
+                                <p>Commuting on BART & Muni between the Presidio, SFSU, and city adventures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Experience (11 Real Roles) -->
+        <section class="section-experience" id="experience">
+            <div class="exp-container">
+                <div class="exp-header-block">
+                    <div class="category-title-pill">experience</div>
+                    <p class="category-subtitle">2 majors, 4 concurrent roles, one driven mindset.</p>
+                    <p class="exp-intro-text">
+                        A dynamic track record spanning digital marketing, lead generation, student government representation, residential leadership, outdoor expedition guiding, and academic support.
+                    </p>
+                    
+                    <!-- FILTER TABS -->
+                    <div class="exp-filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All Roles (11)</button>
+                        <button class="filter-btn" data-filter="marketing">Marketing & Digital (2)</button>
+                        <button class="filter-btn" data-filter="leadership">Representation & Admin (3)</button>
+                        <button class="filter-btn" data-filter="community">Community & Student Affairs (6)</button>
+                    </div>
+                </div>
+
+                <div class="experience-grid">
+                    
+                    <!-- ROLE 1: Pachamama Alliance -->
+                    <div class="exp-card featured" data-category="marketing">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Marketing & Social Impact</span>
+                                <h3 class="role-title">Social Media Intern</h3>
+                                <h4 class="company-name">Pachamama Alliance</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">June 2026 – August 2026</span>
+                                <span class="exp-loc">📍 San Francisco (Presidio Office, In-Person)</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Collaborated directly with the Social Media Manager on multi-platform content strategy for an international non-profit dedicated to supporting Indigenous communities of the Amazon basin.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Created high-impact short-form video content and designed on-brand Canva graphic assets and reusable template systems for rapid cross-channel deployment.</li>
+                            <li>Executed influencer and mission-aligned partnership research to amplify campaign awareness and expand donor networks.</li>
+                            <li>Drove community engagement and multi-tier lead generation campaigns connecting conscious global audiences with indigenous climate initiatives.</li>
+                            <li>Analyzed post metrics and engagement rates to refine creative storytelling and maximize organic reach.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Short-Form Video</span>
+                            <span class="skill-tag">Canva Templates</span>
+                            <span class="skill-tag">Lead Generation</span>
+                            <span class="skill-tag">Influencer Outreach</span>
+                            <span class="skill-tag">Community Engagement</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 2: Lam Family College of Business -->
+                    <div class="exp-card featured" data-category="marketing">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Digital Marketing & CRM</span>
+                                <h3 class="role-title">Digital Marketing Intern</h3>
+                                <h4 class="company-name">Lam Family College of Business (SFSU)</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jan 2025 – Present</span>
+                                <span class="exp-loc">📍 San Francisco State University</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Spearhead digital marketing communications, CRM email campaigns, and web presence to elevate college visibility and boost active student enrollment and participation.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Designed and launched responsive email campaigns, promotional social media collateral, and marketing assets utilizing HTML, Canva, and Salesforce Pardot.</li>
+                            <li>Executed lead-generating marketing funnels that heightened student event attendance and programmatic interest across undergraduate and graduate degrees.</li>
+                            <li>Assisted with Drupal website updates, event promotion calendars, and comprehensive content migration to deliver a seamless digital student experience.</li>
+                            <li>Monitored open rates, click-through rates, and inquiry submissions to optimize future campaign performance.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Salesforce Pardot</span>
+                            <span class="skill-tag">HTML / CSS</span>
+                            <span class="skill-tag">Canva</span>
+                            <span class="skill-tag">Lead Generation</span>
+                            <span class="skill-tag">Drupal CMS</span>
+                            <span class="skill-tag">Email Campaigns</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 3: Associated Students -->
+                    <div class="exp-card" data-category="leadership">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Governance & Advocacy</span>
+                                <h3 class="role-title">Business Representative</h3>
+                                <h4 class="company-name">Associated Students (SFSU)</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Aug 2024 – Present</span>
+                                <span class="exp-loc">📍 San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Elected representative advocating on behalf of thousands of students within the Lam Family College of Business to Deans, faculty councils, and university administration.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Communicated student academic needs, career service feedback, and resource accessibility directly to executive leadership.</li>
+                            <li>Collaborated with the Vice President of Academic Affairs and peer College Representatives to draft resolutions and amplify diverse student voices.</li>
+                            <li>Spearheaded student outreach forums to gather qualitative feedback and translate student concerns into tangible policy improvements.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Student Advocacy</span>
+                            <span class="skill-tag">Executive Presentation</span>
+                            <span class="skill-tag">Policy Collaboration</span>
+                            <span class="skill-tag">Public Speaking</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 4: Student Events and Technical Services -->
+                    <div class="exp-card" data-category="leadership">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Operations & Event Logistics</span>
+                                <h3 class="role-title">Office Administrator</h3>
+                                <h4 class="company-name">Student Events and Technical Services</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Aug 2025 – Present</span>
+                                <span class="exp-loc">📍 SFSU Student Center</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Drive operational excellence, logistics coordination, and administrative reporting for high-volume campus events, productions, and technical service delivery.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Manage comprehensive office inventory, scheduling pipelines, and multi-department coordination with internal technical crews and external event partners.</li>
+                            <li>Handle sensitive event documentation, financial reporting, billing verification, and office communications with meticulous accuracy and timeliness.</li>
+                            <li>Streamline administrative workflows to support dozens of concurrent student organization and institutional campus events.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Event Logistics</span>
+                            <span class="skill-tag">Operations Management</span>
+                            <span class="skill-tag">Scheduling & Inventory</span>
+                            <span class="skill-tag">Cross-Team Coordination</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 5: Residential Life -->
+                    <div class="exp-card" data-category="community">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Community Leadership</span>
+                                <h3 class="role-title">Resident Assistant (RA)</h3>
+                                <h4 class="company-name">Residential Life (SFSU)</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Oct 2025 – Present</span>
+                                <span class="exp-loc">📍 University Housing, SFSU</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Mentor and support residential college students while cultivating an inclusive, welcoming, and academically nurturing residential community.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Facilitate conflict mediation, provide immediate crisis intervention, share university health/counseling resources, and fulfill regular on-call emergency duty rotations.</li>
+                            <li>Track resident interactions, incident reports, and facility needs to maintain a secure, safe, and supportive living environment.</li>
+                            <li>Plan and host intentional community programs promoting diversity, mental wellness, and student connection.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Crisis Management</span>
+                            <span class="skill-tag">Conflict Mediation</span>
+                            <span class="skill-tag">Community Building</span>
+                            <span class="skill-tag">Emergency Protocols</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 6: Campus Recreation - Trip Leader -->
+                    <div class="exp-card" data-category="community">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Experiential Education</span>
+                                <h3 class="role-title">Outdoor Trip Leader</h3>
+                                <h4 class="company-name">SFSU Campus Recreation</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jan 2025 – August 2026</span>
+                                <span class="exp-loc">📍 Northern California Wilderness & Coast</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Lead outdoor programs, wilderness expeditions, and experiential leadership trips prioritizing safety, ecological stewardship, and transformative student experiences.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Guide participants through outdoor programs and excursions with focused attention on risk mitigation, outdoor skills, and team bonding.</li>
+                            <li>Oversee technical equipment preparation, logistics planning, permit compliance, and Leave No Trace environmental ethics.</li>
+                            <li>Create welcoming, accessible outdoor spaces for students of all background and experience levels.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Outdoor Leadership</span>
+                            <span class="skill-tag">Leave No Trace</span>
+                            <span class="skill-tag">Risk Assessment</span>
+                            <span class="skill-tag">Group Facilitation</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 7: College of Professional and Global Education -->
+                    <div class="exp-card" data-category="leadership">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Academic Administration</span>
+                                <h3 class="role-title">Enrollment Assistant</h3>
+                                <h4 class="company-name">College of Professional and Global Education</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Aug 2025 – Jan 2026</span>
+                                <span class="exp-loc">📍 SFSU Downtown / Main Campus</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Assisted domestic and international students with complex academic enrollment, registration processes, and degree inquiries.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Resolved high-volume student enrollment questions via phone, ticketing email queues, and in-person front desk consultations.</li>
+                            <li>Tracked student interactions, enrollment trends, and administrative records in Excel while upholding strict FERPA confidentiality.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Excel Data Tracking</span>
+                            <span class="skill-tag">Student Consultation</span>
+                            <span class="skill-tag">Data Confidentiality</span>
+                            <span class="skill-tag">Process Navigation</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 8: Basic Needs Program -->
+                    <div class="exp-card" data-category="community">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Student Advocacy & Wellness</span>
+                                <h3 class="role-title">Basic Needs Program Assistant</h3>
+                                <h4 class="company-name">SFSU Basic Needs Initiatives</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Aug 2024 – Aug 2025</span>
+                                <span class="exp-loc">📍 San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Connected vulnerable and under-resourced students with essential campus and community lifelines, including food pantry, emergency housing, and financial grants.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Assisted with organizing interactive educational workshops, food distribution events, and virtual awareness campaigns.</li>
+                            <li>Maintained empathetic front-line communication to ensure students felt supported, respected, and destigmatized.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Resource Navigation</span>
+                            <span class="skill-tag">Workshop Coordination</span>
+                            <span class="skill-tag">Empathetic Communication</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 9: Women's Center -->
+                    <div class="exp-card" data-category="community">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Equity & Inclusion</span>
+                                <h3 class="role-title">Intern</h3>
+                                <h4 class="company-name">SFSU Women's Center</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Aug 2024 – Aug 2025</span>
+                                <span class="exp-loc">📍 Student Center, SFSU</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Supported campus programming dedicated to gender justice, equity, and fostering a safe, empowering environment for all students.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Facilitated discussions and organized awareness events promoting gender equality, safety, and mutual support.</li>
+                            <li>Collaborated with student groups to amplify intersectional awareness through digital content and community gatherings.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Gender Justice</span>
+                            <span class="skill-tag">Inclusive Programming</span>
+                            <span class="skill-tag">Community Outreach</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 10: Kids Camp Counselor -->
+                    <div class="exp-card" data-category="community">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Youth Mentorship</span>
+                                <h3 class="role-title">Kids Camp Counselor</h3>
+                                <h4 class="company-name">SFSU Campus Recreation</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">May 2024 – July 2024</span>
+                                <span class="exp-loc">📍 Mashouf Wellness Center</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Supervised and mentored youth campers during recreational activities, field trips, pool sessions, and rock climbing walls.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Facilitated daily camp agendas and fostered camper growth through creativity, active sports, and collaborative teamwork.</li>
+                            <li>Ensured high standards of child safety, camper engagement, and parent communication.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Youth Supervision</span>
+                            <span class="skill-tag">Activity Design</span>
+                            <span class="skill-tag">Parent Communication</span>
+                        </div>
+                    </div>
+
+                    <!-- ROLE 11: Re-Gator Program -->
+                    <div class="exp-card" data-category="community">
+                        <div class="tape-corner"></div>
+                        <div class="exp-card-header">
+                            <div class="role-company">
+                                <span class="exp-type-tag">Academic Retention</span>
+                                <h3 class="role-title">Peer Coach</h3>
+                                <h4 class="company-name">Re-gator Program (SFSU)</h4>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">March 2024 – May 2024</span>
+                                <span class="exp-loc">📍 San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <p class="exp-summary">
+                            Empowered students returning to SF State after academic breaks with 1-on-1 mentorship, campus resources, and graduation roadmaps.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Partnered with academic advisors and program staff to remove institutional hurdles and boost student retention.</li>
+                            <li>Coached returning Gators on time management, degree audits, and revitalized academic confidence.</li>
+                        </ul>
+                        <div class="exp-skills">
+                            <span class="skill-tag">Peer Mentorship</span>
+                            <span class="skill-tag">Degree Audits</span>
+                            <span class="skill-tag">Student Retention</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Leadership, Awards & Academic Honors -->
+        <section class="section-leadership-honors" id="leadership">
+            <div class="lh-wrapper">
+                
+                <!-- COLUMN 1: Honors & Awards -->
+                <div class="lh-box honors-card">
+                    <div class="wax-seal">★</div>
+                    <h2 class="lh-title">awards & honors</h2>
+                    <p class="lh-subtitle">academic excellence & university distinction</p>
+                    
+                    <div class="honors-list">
+                        <div class="honor-item standout">
+                            <div class="honor-icon">🏆</div>
+                            <div class="honor-info">
+                                <h3 class="honor-name">Alli Award (2nd Year)</h3>
+                                <p class="honor-desc">Prestigious annual university award honoring exceptional leadership, resilience, and campus community contribution.</p>
+                            </div>
+                        </div>
+
+                        <div class="honor-item standout">
+                            <div class="honor-icon">🏅</div>
+                            <div class="honor-info">
+                                <h3 class="honor-name">Beta Gamma Sigma International Honor Society</h3>
+                                <p class="honor-desc">Lifetime member of the highest international recognition a business student can receive — top 10% of AACSB-accredited business programs worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div class="honor-item">
+                            <div class="honor-icon">📊</div>
+                            <div class="honor-info">
+                                <h3 class="honor-name">3.9 Cumulative GPA</h3>
+                                <p class="honor-desc">Demonstrated quantitative rigor and academic discipline across dual concentrations in Marketing & Decision Science.</p>
+                            </div>
+                        </div>
+
+                        <div class="honor-item">
+                            <div class="honor-icon">📜</div>
+                            <div class="honor-info">
+                                <h3 class="honor-name">Dean's List Honoree</h3>
+                                <p class="honor-desc">Repeated semesters of top-tier academic distinction at the Lam Family College of Business.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: Leadership Positions -->
+                <div class="lh-box leadership-card">
+                    <div class="wax-seal">✦</div>
+                    <h2 class="lh-title">leadership</h2>
+                    <p class="lh-subtitle">representation, governance & committee service</p>
+                    
+                    <div class="leadership-list">
+                        <div class="lead-item">
+                            <div class="lead-badge">GLOBAL</div>
+                            <div class="lead-info">
+                                <h4>Student Representative</h4>
+                                <p class="lead-org">All University Committee on International Programs</p>
+                                <span class="lead-note">Advocating for international student mobility, global education policy, and cross-cultural campus integration.</span>
+                            </div>
+                        </div>
+
+                        <div class="lead-item">
+                            <div class="lead-badge">ACCREDITATION</div>
+                            <div class="lead-info">
+                                <h4>Student Representative</h4>
+                                <p class="lead-org">Association to Advance Collegiate Schools of Business (AACSB)</p>
+                                <span class="lead-note">Representing student experiences during international accreditation reviews for business excellence.</span>
+                            </div>
+                        </div>
+
+                        <div class="lead-item">
+                            <div class="lead-badge">FELLOWSHIP</div>
+                            <div class="lead-info">
+                                <h4>Fellow</h4>
+                                <p class="lead-org">Women in Trade</p>
+                                <span class="lead-note">Engaging with global commerce leaders, mentorship circles, and international trade policy summits.</span>
+                            </div>
+                        </div>
+
+                        <div class="lead-item">
+                            <div class="lead-badge">GOVERNANCE</div>
+                            <div class="lead-info">
+                                <h4>Chair</h4>
+                                <p class="lead-org">Student College Advisory Committee</p>
+                                <span class="lead-note">Leading council agendas and advising academic leadership on curricular initiatives.</span>
+                            </div>
+                        </div>
+
+                        <div class="lead-item">
+                            <div class="lead-badge">AMBASSADOR</div>
+                            <div class="lead-info">
+                                <h4>Student Ambassador</h4>
+                                <p class="lead-org">Lam Family College of Business</p>
+                                <span class="lead-note">Representing the college at campus open houses, donor events, and prospective student orientations.</span>
+                            </div>
+                        </div>
+
+                        <div class="lead-item">
+                            <div class="lead-badge">VOLUNTEER</div>
+                            <div class="lead-info">
+                                <h4>Volunteer</h4>
+                                <p class="lead-org">Pachamama Alliance 30th Anniversary</p>
+                                <span class="lead-note">Supported landmark anniversary event operations honoring indigenous rainforest protection.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: Featured Projects & Video Production (Canva Slide 6) -->
+        <section class="section-projects" id="projects">
+            <div class="projects-container">
+                <div class="category-header">
+                    <div class="category-title-pill">featured projects & videos</div>
+                    <p class="category-subtitle">video production, digital campaigns, strategic case studies & research</p>
+                </div>
+
+                <!-- SPOTLIGHT HERO VIDEO: LFCoB Promotional Video -->
+                <div class="video-spotlight-card">
+                    <div class="video-spotlight-header">
+                        <div class="video-badge-group">
+                            <span class="video-badge-pill red">▶ FEATURED PROMOTIONAL VIDEO</span>
+                            <span class="video-badge-pill">SFSU LAM FAMILY COLLEGE OF BUSINESS</span>
+                            <span class="video-badge-pill">PRODUCED & EDITED BY GANYA BHATTI</span>
+                        </div>
+                        <h3 class="video-spotlight-title">LFCoB Promotional Video</h3>
+                        <p class="video-spotlight-desc">
+                            Conceptualized, storyboarded, and produced a high-energy promotional video highlighting academic excellence, dynamic student organizations, diverse campus opportunities, and Gator spirit at SFSU's Lam Family College of Business.
+                        </p>
+                    </div>
+
+                    <!-- RESPONSIVE 16:9 EMBEDDED VIDEO CONTAINER -->
+                    <div class="video-player-wrapper">
+                        <div class="video-film-header">
+                            <div class="video-rec-indicator"><span class="rec-dot"></span> REC • 4K UHD</div>
+                            <div class="video-timecode">00:01:42:18 • YOUTUBE PLAYER</div>
+                            <div class="video-quality">1080p 60fps HD</div>
+                        </div>
+                        <div class="video-iframe-box">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/tGlKWiwX1fc?rel=0&modestbranding=1" 
+                                title="Lam Family College of Business Promotional Video - Produced & Edited by Ganya Bhatti" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-player-footer">
+                            <div class="video-meta-tags">
+                                <span class="v-tag">Video Production</span>
+                                <span class="v-tag">Storyboarding</span>
+                                <span class="v-tag">Student Engagement</span>
+                                <span class="v-tag">Campus Marketing</span>
+                                <span class="v-tag">CapCut & Premiere</span>
+                            </div>
+                            <a href="https://youtu.be/tGlKWiwX1fc" target="_blank" rel="noopener noreferrer" class="btn-watch-youtube">
+                                <span>Watch on YouTube</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 MAJOR PROJECT CARDS (FROM CANVA SLIDE 6) -->
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT 1: LFCoB Promotional Video -->
+                    <div class="project-card">
+                        <div class="tape-corner"></div>
+                        <div class="project-card-badge">VIDEO PRODUCTION • CAMPAIGN</div>
+                        <h4 class="project-title">LFCoB Promotional Video</h4>
+                        <p class="project-role-tag">Producer, Director & Video Editor • SFSU LFCoB</p>
+                        <p class="project-desc">
+                            High-energy promotional reel highlighting student leadership, faculty mentorship, networking events, and career development at San Francisco State University's Lam Family College of Business.
+                        </p>
+                        <div class="project-deliverables">
+                            <span>4K Video</span>
+                            <span>Storyboarding</span>
+                            <span>Video Editing</span>
+                            <span>Student Outreach</span>
+                        </div>
+                        <div class="project-action-row">
+                            <a href="https://youtu.be/tGlKWiwX1fc" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>Watch Video on YouTube</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: Marketing Content Portfolio (Canva) -->
+                    <div class="project-card">
+                        <div class="tape-corner"></div>
+                        <div class="project-card-badge">DIGITAL DESIGN • VISUAL IDENTITY</div>
+                        <h4 class="project-title">Marketing Content Portfolio</h4>
+                        <p class="project-role-tag">Lead Graphic Designer & Content Creator • Canva</p>
+                        <p class="project-desc">
+                            Extensive design showcase featuring digital marketing assets, branded event collateral, flyers, social carousels, and visual templates engineered for high audience engagement across university units.
+                        </p>
+                        <div class="project-deliverables">
+                            <span>Canva Pro</span>
+                            <span>Brand Identity</span>
+                            <span>Flyers & Posters</span>
+                            <span>Social Media Sets</span>
+                        </div>
+                        <div class="project-action-row">
+                            <a href="https://www.canva.com/design/DAGy7jotg08" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>Open Canva Portfolio</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: Dubai Luxury Real Estate Marketing Strategy -->
+                    <div class="project-card">
+                        <div class="tape-corner"></div>
+                        <div class="project-card-badge">MARKET RESEARCH • STRATEGY</div>
+                        <h4 class="project-title">Dubai Real Estate Marketing Strategy</h4>
+                        <p class="project-role-tag">Market Researcher & Strategist • 4-Part Study</p>
+                        <p class="project-desc">
+                            A comprehensive 4-part research dossier examining luxury property trends, investor acquisition funnels, digital ad performance, and high-net-worth client relationship management.
+                        </p>
+                        <div class="project-deliverables">
+                            <span>Google Drive Dossier</span>
+                            <span>4-Part Analysis</span>
+                            <span>Buyer Personas</span>
+                            <span>Digital Funnel Models</span>
+                        </div>
+                        <div class="project-action-row">
+                            <a href="https://drive.google.com/drive/folders/1LAL3sB3pMdyvwQ80vfZ9CwlK7olfI4xw?usp=share_link" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>View Google Drive (4 Parts)</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4: Amazon Marketing Strategy & Flywheel Case Study -->
+                    <div class="project-card">
+                        <div class="tape-corner"></div>
+                        <div class="project-card-badge">DECISION SCIENCE • CASE STUDY</div>
+                        <h4 class="project-title">Amazon Marketing Strategy & Flywheel</h4>
+                        <p class="project-role-tag">Strategic Analyst • Google Slides Presentation</p>
+                        <p class="project-desc">
+                            In-depth analytical deck dissecting Amazon's customer obsession flywheel, Prime loyalty mechanics, predictive cross-selling algorithms, and marketplace platform economics.
+                        </p>
+                        <div class="project-deliverables">
+                            <span>Google Slides Deck</span>
+                            <span>Flywheel Economics</span>
+                            <span>Prime Retention</span>
+                            <span>Merchandising Strategy</span>
+                        </div>
+                        <div class="project-action-row">
+                            <a href="https://docs.google.com/presentation/d/1-p4o0iavlCqhOBQ6UK448P5c3_15RaWF12DYDqFRpik/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                                <span>View Google Slides Deck</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- VISUAL OVERVIEW SCRAPBOOK CARD FROM CANVA SLIDE 6 -->
+                <div class="project-overview-scrapbook">
+                    <div class="scrapbook-card-inner">
+                        <div class="overview-header">
+                            <h4>Featured Projects Portfolio Slide</h4>
+                            <span class="click-zoom-hint">🔍 Click image to enlarge full slide</span>
+                        </div>
+                        <div class="slide-image-wrapper" onclick="openLightbox('assets/ganya_projects_overview.png', 'Featured Projects Slide — Ganya Bhatti Portfolio')">
+                            <img src="assets/ganya_projects_overview.png" alt="Featured Projects Overview Slide" class="zoomable-slide-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: Flyers & Event Posters Gallery (Canva Slide 8) -->
+        <section class="section-flyers" id="flyers">
+            <div class="flyers-container">
+                <div class="category-header">
+                    <div class="category-title-pill">flyers & event posters</div>
+                    <p class="category-subtitle">creative visual assets designed for university campaigns & student organizations</p>
+                </div>
+
+                <!-- FULL SPREAD BANNER -->
+                <div class="flyers-banner-box">
+                    <div class="banner-top-bar">
+                        <span class="banner-label">📌 10 REAL EVENT FLYERS & MARKETING CAMPAIGNS</span>
+                        <span class="banner-hint">Click poster board to view high-resolution gallery</span>
+                    </div>
+                    <div class="flyers-image-zoom-box" onclick="openLightbox('assets/ganya_flyers_posters.png', 'Flyers & Event Posters Gallery (10 Campaigns) — Designed by Ganya Bhatti')">
+                        <img src="assets/ganya_flyers_posters.png" alt="Flyers and Event Posters Designed by Ganya Bhatti" class="flyers-main-img">
+                        <div class="zoom-overlay">
+                            <span class="zoom-icon">🔍</span>
+                            <span>Click to Enlarge Full Poster Board</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE CAMPAIGN FILTERS -->
+                <div class="filter-pills-bar" id="flyer-filters">
+                    <button class="filter-pill active" data-filter="all" onclick="filterFlyers('all', this);">🌟 All Campaigns (10)</button>
+                    <button class="filter-pill" data-filter="wellness" onclick="filterFlyers('wellness', this);">🌿 Community & Wellness (6)</button>
+                    <button class="filter-pill" data-filter="gov" onclick="filterFlyers('gov', this);">🗳️ Elections & Advocacy (2)</button>
+                    <button class="filter-pill" data-filter="career" onclick="filterFlyers('career', this);">💼 Business & Career (2)</button>
+                </div>
+
+                <!-- 10 CAMPAIGNS HIGHLIGHT GRID -->
+                <div class="flyer-campaigns-grid" id="flyer-grid">
+                    <div class="campaign-chip" data-category="wellness">
+                        <span class="chip-num">01</span>
+                        <div class="chip-content">
+                            <h5>Medi-Cal Enrollment Assistance</h5>
+                            <p>Associated Students • Healthcare access campaign for students</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="gov">
+                        <span class="chip-num">02</span>
+                        <div class="chip-content">
+                            <h5>AS Elections 2025: Make Your Voice Heard</h5>
+                            <p>Student Government • Voter awareness & ballot mobilization</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="wellness">
+                        <span class="chip-num">03</span>
+                        <div class="chip-content">
+                            <h5>Gator Community Thrift & Clothing Drive</h5>
+                            <p>Basic Needs • Sustainable clothing exchange & donations</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="wellness">
+                        <span class="chip-num">04</span>
+                        <div class="chip-content">
+                            <h5>In-Home Chef Culinary Demo</h5>
+                            <p>Residential Life • Interactive cooking workshop for residents</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="career">
+                        <span class="chip-num">05</span>
+                        <div class="chip-content">
+                            <h5>Budgeting 101 Financial Wellness</h5>
+                            <p>LFCoB Peer Coaching • Financial literacy seminar</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="wellness">
+                        <span class="chip-num">06</span>
+                        <div class="chip-content">
+                            <h5>Wilderness Backpacking Point Reyes</h5>
+                            <p>Campus Rec • Outdoor expedition trip marketing & safety prep</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="gov">
+                        <span class="chip-num">07</span>
+                        <div class="chip-content">
+                            <h5>Women's Empowerment Night</h5>
+                            <p>AS Women's Center • Community gathering & celebration</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="wellness">
+                        <span class="chip-num">08</span>
+                        <div class="chip-content">
+                            <h5>De-Stress Fest Study Oasis</h5>
+                            <p>Student Events • Finals wellness & mindfulness activities</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="career">
+                        <span class="chip-num">09</span>
+                        <div class="chip-content">
+                            <h5>Career Fair Prep & Resume Polish</h5>
+                            <p>Career Services PDC • Professional development workshop</p>
+                        </div>
+                    </div>
+                    <div class="campaign-chip" data-category="wellness">
+                        <span class="chip-num">10</span>
+                        <div class="chip-content">
+                            <h5>Gator Food Pantry Distribution</h5>
+                            <p>Basic Needs • Weekly fresh groceries distribution outreach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Short Videos & Reels Showcase (Canva Slides 9 & 10) -->
+        <section class="section-reels" id="reels">
+            <div class="reels-container">
+                <div class="category-header">
+                    <div class="category-title-pill">short videos & reels</div>
+                    <p class="category-subtitle">10 short-form video campaigns created for instagram, tiktok & campus channels</p>
+                </div>
+
+                <div class="reels-slides-grid">
+                    <!-- REELS SET 1 (From Canva Page 9) -->
+                    <div class="reel-slide-card">
+                        <div class="reel-card-header">
+                            <h4>Part 1: Campaigns & Community Reels</h4>
+                            <span class="reel-count-pill">5 Short Videos</span>
+                        </div>
+                        <div class="reel-image-wrapper" onclick="openLightbox('assets/ganya_short_videos_1.png', 'Short Videos & Reels Part 1 — Ganya Bhatti')">
+                            <img src="assets/ganya_short_videos_1.png" alt="Short Videos & Reels Part 1" class="reel-slide-img">
+                            <div class="zoom-overlay">
+                                <span class="zoom-icon">🔍</span>
+                                <span>Click to Enlarge Phone Mockups</span>
+                            </div>
+                        </div>
+                        <div class="reel-descriptions">
+                            <div class="reel-item">
+                                <strong>01. Pachamama Alliance Climate Action:</strong> High-impact awareness reel honoring indigenous Amazonian wisdom.
+                            </div>
+                            <div class="reel-item">
+                                <strong>02. Holi 2024 Celebration:</strong> Vibrant colors and cultural community festival on SFSU Quad.
+                            </div>
+                            <div class="reel-item">
+                                <strong>03. LFCoB Business Showcase:</strong> Academic excellence & student resource spotlights.
+                            </div>
+                            <div class="reel-item">
+                                <strong>04. AS Student Elections:</strong> Voter engagement & candidate platform mobilization.
+                            </div>
+                            <div class="reel-item">
+                                <strong>05. Gator Food Pantry:</strong> Step-by-step guide to accessing free groceries on campus.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REELS SET 2 (From Canva Page 10) -->
+                    <div class="reel-slide-card">
+                        <div class="reel-card-header">
+                            <h4>Part 2: Campus Life & Outdoor Leadership</h4>
+                            <span class="reel-count-pill">5 Short Videos</span>
+                        </div>
+                        <div class="reel-image-wrapper" onclick="openLightbox('assets/ganya_short_videos_2.png', 'Short Videos & Reels Part 2 — Ganya Bhatti')">
+                            <img src="assets/ganya_short_videos_2.png" alt="Short Videos & Reels Part 2" class="reel-slide-img">
+                            <div class="zoom-overlay">
+                                <span class="zoom-icon">🔍</span>
+                                <span>Click to Enlarge Phone Mockups</span>
+                            </div>
+                        </div>
+                        <div class="reel-descriptions">
+                            <div class="reel-item">
+                                <strong>06. Point Reyes Backpacking Trip:</strong> Cinematic outdoor expedition highlights with Campus Rec.
+                            </div>
+                            <div class="reel-item">
+                                <strong>07. ResLife Move-In Day:</strong> Warm welcome & residence hall tour for incoming Gators.
+                            </div>
+                            <div class="reel-item">
+                                <strong>08. Women's History Month:</strong> Uplifting diverse female leaders across university spaces.
+                            </div>
+                            <div class="reel-item">
+                                <strong>09. Day in the Life:</strong> Double majoring in Marketing & Decision Science at SFSU.
+                            </div>
+                            <div class="reel-item">
+                                <strong>10. Mashouf Wellness Fitness Challenge:</strong> Student recreation & gym community spotlight.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Creative & Analytical Toolkit -->
+        <section class="section-toolkit" id="toolkit">
+            <div class="toolkit-container">
+                <div class="category-header">
+                    <div class="category-title-pill">creative toolkit</div>
+                    <p class="category-subtitle">design, analytical modeling, martech & ai workflows</p>
+                </div>
+
+                <div class="toolkit-grid">
+                    
+                    <!-- TOOLKIT 1: Design & Content -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon-circle">🎨</div>
+                            <h3>Design & Content</h3>
+                        </div>
+                        <p class="tool-desc">Crafting visually captivating, brand-aligned storytelling for modern feeds and web audiences.</p>
+                        <div class="tool-pills">
+                            <span class="tool-pill">Canva Pro</span>
+                            <span class="tool-pill">Adobe Express</span>
+                            <span class="tool-pill">CapCut</span>
+                            <span class="tool-pill">Instagram Edits</span>
+                            <span class="tool-pill">TikTok Video</span>
+                            <span class="tool-pill">Reusable Graphic Systems</span>
+                            <span class="tool-pill">Storyboarding</span>
+                        </div>
+                    </div>
+
+                    <!-- TOOLKIT 2: Marketing & Web -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon-circle">📈</div>
+                            <h3>Marketing & Web</h3>
+                        </div>
+                        <p class="tool-desc">Executing full-funnel digital campaigns, email automations, and web content migrations.</p>
+                        <div class="tool-pills">
+                            <span class="tool-pill">Salesforce Pardot</span>
+                            <span class="tool-pill">Buffer</span>
+                            <span class="tool-pill">Drupal CMS</span>
+                            <span class="tool-pill">HTML / CSS</span>
+                            <span class="tool-pill">Email Campaigns</span>
+                            <span class="tool-pill">Lead Generation</span>
+                            <span class="tool-pill">Content Migration</span>
+                        </div>
+                    </div>
+
+                    <!-- TOOLKIT 3: Data & Decision Science -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon-circle">📊</div>
+                            <h3>Data & Decision Science</h3>
+                        </div>
+                        <p class="tool-desc">Transforming quantitative data into clear, actionable business strategies and decisions.</p>
+                        <div class="tool-pills">
+                            <span class="tool-pill">Google Analytics</span>
+                            <span class="tool-pill">Tableau</span>
+                            <span class="tool-pill">Microsoft Excel (Advanced)</span>
+                            <span class="tool-pill">Decision Science Modeling</span>
+                            <span class="tool-pill">Data Tracking & Reporting</span>
+                            <span class="tool-pill">A/B Testing Insights</span>
+                        </div>
+                    </div>
+
+                    <!-- TOOLKIT 4: AI & Emerging Tech -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon-circle">🤖</div>
+                            <h3>AI & Emerging Tech</h3>
+                        </div>
+                        <p class="tool-desc">Leveraging state-of-the-art LLMs to accelerate research, draft copy, and automate workflows.</p>
+                        <div class="tool-pills">
+                            <span class="tool-pill">Claude</span>
+                            <span class="tool-pill">ChatGPT</span>
+                            <span class="tool-pill">Google Gemini</span>
+                            <span class="tool-pill">Prompt Engineering</span>
+                            <span class="tool-pill">AI Workflow Automation</span>
+                            <span class="tool-pill">Market Research Synthesis</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Certificates -->
+        <section class="section-certificates" id="certificates">
+            <div class="cert-wrapper">
+                <div class="category-header">
+                    <div class="category-title-pill">certifications</div>
+                    <p class="category-subtitle">accredited professional, digital & outdoor credentials</p>
+                </div>
+
+                <!-- VERIFIED GOOGLE DRIVE FOLDER CALLOUT -->
+                <div class="cert-drive-card">
+                    <div class="drive-icon">📂</div>
+                    <div class="drive-text">
+                        <h4>Official Certificate Repository (Google Drive)</h4>
+                        <p>Access official credentials, PDF transcripts, and accredited certification documents in the cloud.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1J-ifrV-WbOrXZrSjrXtK_xIoyzis_Hot?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-cert-drive">
+                        <span>Open Drive Repository</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="tickets-grid">
+                    
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">HEALTH & SAFETY</div>
+                        <h4 class="ticket-title">First Aid, CPR and AED</h4>
+                        <p class="ticket-issuer">American Red Cross</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">ARC-CPR</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">REAL ESTATE</div>
+                        <h4 class="ticket-title">Real Estate Certificate</h4>
+                        <p class="ticket-issuer">Colibri Real Estate</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">COLIBRI-RE</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">DIGITAL MARKETING</div>
+                        <h4 class="ticket-title">Social Media Marketing</h4>
+                        <p class="ticket-issuer">Professional Certification</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">SMM-CERT</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">SEARCH MARKETING</div>
+                        <h4 class="ticket-title">Search Engine Optimization (SEO)</h4>
+                        <p class="ticket-issuer">Professional Certification</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">SEO-CERT</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">OPERATIONS</div>
+                        <h4 class="ticket-title">ServSafe Food Handler</h4>
+                        <p class="ticket-issuer">ServSafe National Restaurant Assoc.</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">SERVSAFE</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">OUTDOORS</div>
+                        <h4 class="ticket-title">California Campfire Permit</h4>
+                        <p class="ticket-issuer">State of California / USFS</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">CA-FIRE</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-notch-top"></div>
+                        <div class="ticket-badge">ENVIRONMENTAL</div>
+                        <h4 class="ticket-title">Leave No Trace (LNT) Course</h4>
+                        <p class="ticket-issuer">Center for Outdoor Ethics</p>
+                        <div class="ticket-footer">
+                            <span class="ticket-verified">✓ Verified</span>
+                            <span class="ticket-code">LNT-ETHICS</span>
+                        </div>
+                        <div class="ticket-notch-bottom"></div>
+                    </div>
+
+                </div>
+
+                <!-- CERTIFICATIONS SLIDE PREVIEW FROM CANVA SLIDE 7 -->
+                <div class="cert-slide-box" onclick="openLightbox('assets/ganya_certifications_slide.png', 'Accredited Certifications Slide — Ganya Bhatti Portfolio')">
+                    <div class="overview-header">
+                        <h4>Accredited Certifications Portfolio Slide</h4>
+                        <span class="click-zoom-hint">🔍 Click image to enlarge full slide</span>
+                    </div>
+                    <img src="assets/ganya_certifications_slide.png" alt="Accredited Certifications Slide" class="cert-slide-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Testimonials (The 7 Mentors & Leaders) -->
+        <section class="section-testimonials" id="testimonials">
+            <div class="testimonials-wrapper">
+                <div class="category-header">
+                    <div class="category-title-pill">testimonials</div>
+                    <p class="category-subtitle">words from mentors, supervisors & collaborators</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    
+                    <!-- 1. Marilyn Jackson -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "Ganya brings an incredible blend of cultural agility, strategic clarity, and authentic dedication to everything she undertakes. Her natural ability to rally student voices, articulate complex requirements, and cultivate community makes her an exceptional asset to any team."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Marilyn Jackson</span>
+                            <span class="author-title">University Leadership & Mentor</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Lihua Wang -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "In both analytical rigor and creative conceptualization, Ganya consistently excels. Her dual focus in Decision Science and Marketing allows her to approach business challenges with data-driven precision while keeping the human story front and center."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Lihua Wang</span>
+                            <span class="author-title">Academic & Decision Science Faculty</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Sara Flynn -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "Working alongside Ganya is inspiring. She approaches marketing campaigns and community initiatives with genuine warmth and impeccable organization. Her Canva assets and short-form storytelling consistently elevate audience engagement."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Sara Flynn</span>
+                            <span class="author-title">Marketing & Programs Collaborator</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Sandra -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "As a Resident Assistant and student advocate, Ganya demonstrates deep empathy, poise during emergencies, and a true gift for conflict mediation. She transforms any space into an inclusive community where students feel valued and secure."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Sandra</span>
+                            <span class="author-title">Residential Life Leadership</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Roann -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "Ganya’s organizational instincts are second to none. In student events and operations, she handles complex logistics, multi-team scheduling, and administrative reporting with complete accuracy and contagious positive energy."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Roann</span>
+                            <span class="author-title">Student Events & Technical Services</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. Vernon -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "From guiding wilderness expeditions with Campus Rec to executing student success coaching, Ganya's resilience and adaptability shine. She is dependable under pressure, safety-conscious, and an uplifting leader."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Vernon</span>
+                            <span class="author-title">Campus Recreation & Outdoor Operations</span>
+                        </div>
+                    </div>
+
+                    <!-- 7. Christine -->
+                    <div class="test-card">
+                        <div class="tape"></div>
+                        <div class="quote-mark">“</div>
+                        <p class="test-quote">
+                            "Ganya is that rare talent who pairs relentless drive with genuine humility. Her digital marketing materials, Pardot workflows, and creative content consistently exceed expectations. She brings passion and intentionality every single day."
+                        </p>
+                        <div class="test-author-box">
+                            <span class="author-name">Christine</span>
+                            <span class="author-title">Lam Family College of Business</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Through My Lens (Campaigns & Creative Work) -->
+        <section class="section-lens" id="lens">
+            <div class="lens-box">
+                <div class="lens-header-wrap">
+                    <h2 class="lens-title">through my lens</h2>
+                    <span class="lens-sub-badge">CAMPAIGNS & DIGITAL EXPERIENCES</span>
+                </div>
+                
+                <div class="lens-content">
+                    <!-- Retro Camera Viewfinder -->
+                    <div class="lens-device">
+                        <div class="device-top-bump"></div>
+                        <div class="device-screen">
+                            <div class="recording-dot"></div>
+                            <img src="photo4.jpg" alt="Campaign Snapshot">
+                            <div class="viewfinder-grid"></div>
+                            <div class="viewfinder-footer">
+                                <span>ISO 400</span>
+                                <span>F/2.8</span>
+                                <span>1/250s</span>
+                                <span>4K RAW</span>
+                            </div>
+                        </div>
+                        <div class="device-buttons">
+                            <div class="btn-small"></div>
+                            <div class="btn-ok">OK</div>
+                            <div class="btn-small"></div>
+                            <div class="btn-camera">REC</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Creative Pillars -->
+                    <div class="lens-pillars">
+                        <div class="pillar-card">
+                            <span class="pillar-num">01</span>
+                            <h4>Indigenous Rights & Climate Storytelling</h4>
+                            <p>Supporting Pachamama Alliance with short-form videos and graphic systems that honor Amazonian communities and inspire climate action.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-num">02</span>
+                            <h4>University & Student Engagement Campaigns</h4>
+                            <p>Transforming student outreach at SFSU Lam Family College of Business via targeted Salesforce Pardot email flows and interactive event marketing.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-num">03</span>
+                            <h4>Community Building & Safe Spaces</h4>
+                            <p>Fostering connection and belonging through intentional programs across Residential Life, Women's Center, and Basic Needs initiatives.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-num">04</span>
+                            <h4>Outdoor Leadership & Adventure</h4>
+                            <p>Guiding wilderness trips with Campus Rec, championing Leave No Trace principles, and helping peers discover the healing power of nature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Interactive Guestbook & Scrapbook Corkboard -->
+        <section class="section-guestbook" id="guestbook">
+            <div class="guestbook-wrapper">
+                <div class="category-header">
+                    <div class="category-title-pill">leave your mark ✨</div>
+                    <p class="category-subtitle">react to ganya's journey or pin a personalized sticky note onto the scrapbook!</p>
+                </div>
+
+                <!-- LIVE EMOJI REACTIONS -->
+                <div class="reactions-bar">
+                    <button class="reaction-btn" onclick="sendReaction('romanticize', this);">
+                        <span>✨</span>
+                        <span>Romanticize the little things!</span>
+                        <span class="reaction-count" id="count-romanticize">284</span>
+                    </button>
+                    <button class="reaction-btn" onclick="sendReaction('data', this);">
+                        <span>📊</span>
+                        <span>Decision Science Mindset</span>
+                        <span class="reaction-count" id="count-data">197</span>
+                    </button>
+                    <button class="reaction-btn" onclick="sendReaction('leader', this);">
+                        <span>👑</span>
+                        <span>Campus Leader</span>
+                        <span class="reaction-count" id="count-leader">312</span>
+                    </button>
+                    <button class="reaction-btn" onclick="sendReaction('storyteller', this);">
+                        <span>🎥</span>
+                        <span>Inspiring Storyteller</span>
+                        <span class="reaction-count" id="count-storyteller">241</span>
+                    </button>
+                </div>
+
+                <!-- CORKBOARD & STICKY NOTE BUILDER -->
+                <div class="corkboard-grid">
+                    <div class="note-creator-card">
+                        <h3>Pin a Note 📌</h3>
+                        <p>Write an encouraging note or greeting for Ganya's graduation year.</p>
+                        
+                        <div class="note-form-group">
+                            <label for="visitor-name">Your Name / Organization</label>
+                            <input type="text" id="visitor-name" class="note-input" placeholder="e.g. SFSU Recruiter / Fellow Gator" maxlength="40">
+                        </div>
+
+                        <div class="note-form-group">
+                            <label for="visitor-message">Your Note (Max 120 chars)</label>
+                            <textarea id="visitor-message" class="note-textarea" rows="3" placeholder="Loved the marketing portfolio and Amazon strategy deck! Best of luck in June 2027!" maxlength="120"></textarea>
+                        </div>
+
+                        <div class="note-form-group">
+                            <label>Sticky Note Color</label>
+                            <div class="color-picker-row">
+                                <button type="button" class="color-dot color-yellow active" data-color="yellow" title="Golden Yellow" onclick="selectNoteColor('yellow', this);"></button>
+                                <button type="button" class="color-dot color-pink" data-color="pink" title="Pastel Pink" onclick="selectNoteColor('pink', this);"></button>
+                                <button type="button" class="color-dot color-blue" data-color="blue" title="Sky Blue" onclick="selectNoteColor('blue', this);"></button>
+                                <button type="button" class="color-dot color-green" data-color="green" title="Sage Green" onclick="selectNoteColor('green', this);"></button>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-pin-note" onclick="pinNewNote();">
+                            <span>📌 Pin to Scrapbook</span>
+                        </button>
+                    </div>
+
+                    <!-- Corkboard Area with Pinned Notes -->
+                    <div class="corkboard-notes-board" id="corkboard-notes-board">
+                        <!-- Populated by JavaScript with initial and user notes -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Let's Work Together / Contact Footer -->
+        <footer class="section-footer" id="contact">
+            <div class="footer-content">
+                <p class="footer-handwritten">let's work</p>
+                <h2 class="footer-huge">together.</h2>
+                
+                <div class="grad-badge-footer">
+                    <span>🎓 SFSU Class of 2027</span>
+                    <span class="bullet">•</span>
+                    <span>Seeking Full-Time Marketing or Entry-Level Data Analytics Roles Starting June 2027</span>
+                </div>
+
+                <div class="footer-pills">
+                    <span class="footer-pill">Digital Marketing</span>
+                    <span class="footer-pill">Decision Science</span>
+                    <span class="footer-pill">Community Leadership</span>
+                    <span class="footer-pill">Event Coordination</span>
+                    <span class="footer-pill">Content Creation</span>
+                    <span class="footer-pill">Lead Generation</span>
+                </div>
+
+                <!-- Contact Grid -->
+                <div class="contact-cards-grid">
+                    <a href="mailto:ganyabhatti5@gmail.com" class="contact-card" title="Send personal email">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <span class="contact-type">Personal Email</span>
+                            <span class="contact-value">ganyabhatti5@gmail.com</span>
+                        </div>
+                        <button class="copy-btn" onclick="event.preventDefault(); copyText('ganyabhatti5@gmail.com', this);">Copy</button>
+                    </a>
+
+                    <a href="mailto:gbhatti@sfsu.edu" class="contact-card" title="Send SFSU email">
+                        <div class="contact-icon">🎓</div>
+                        <div class="contact-details">
+                            <span class="contact-type">University Email</span>
+                            <span class="contact-value">gbhatti@sfsu.edu</span>
+                        </div>
+                        <button class="copy-btn" onclick="event.preventDefault(); copyText('gbhatti@sfsu.edu', this);">Copy</button>
+                    </a>
+
+                    <a href="http://linkedin.com/in/ganyabhatti5" target="_blank" rel="noopener noreferrer" class="contact-card" title="Connect on LinkedIn">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <span class="contact-type">LinkedIn Profile</span>
+                            <span class="contact-value">linkedin.com/in/ganyabhatti5</span>
+                        </div>
+                        <span class="external-arrow">↗</span>
+                    </a>
+
+                    <a href="tel:+17077208331" class="contact-card" title="Call or Text">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <span class="contact-type">Phone</span>
+                            <span class="contact-value">+1 (707) 720-8331</span>
+                        </div>
+                        <button class="copy-btn" onclick="event.preventDefault(); copyText('+17077208331', this);">Copy</button>
+                    </a>
+                </div>
+
+                <p class="copyright-line">© 2026 Ganya Bhatti • San Francisco State University • From India to SFSU</p>
+            </div>
+        </footer>
+        
+        <!-- The End Film Strip -->
+        <div class="section-the-end">
+            <div class="end-film-strip">
+                <!-- top sprocket holes -->
+                <div class="sprockets">
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                </div>
+                <!-- images -->
+                <div class="end-photos">
+                    <img src="assets/ganya_sunset_hero.jpg" alt="Film moment 1 - Ganya sunset">
+                    <img src="assets/ganya_dress_hero.jpg" alt="Film moment 2 - Ganya black dress">
+                    <img src="assets/ganya_jeep_hero.jpg" alt="Film moment 3 - Ganya by white Jeep">
+                    <img src="assets/ganya_coat_hero.jpg" alt="Film moment 4 - Ganya nature bridge">
+                </div>
+                <!-- bottom sprocket holes -->
+                <div class="sprockets">
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                    <div class="sprocket"></div>
+                </div>
+            </div>
+            
+            <div class="the-end-tag">
+                the end
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast-popup" role="status" aria-live="polite"></div>
+
+    <!-- ENHANCED IMAGE LIGHTBOX MODAL WITH GALLERY CONTROLS -->
+    <div id="image-lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
+        <div class="lightbox-counter" id="lightbox-counter">1 / 1</div>
+        <button class="lightbox-nav-btn prev" onclick="navigateLightbox(-1, event);" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav-btn next" onclick="navigateLightbox(1, event);" aria-label="Next image">›</button>
+        <div class="lightbox-dialog" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close image modal">✕</button>
+            <img id="lightbox-img" src="" alt="Full view" class="lightbox-image">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- FLOATING WAX SEAL BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="wax-seal-back-to-top" aria-label="Back to top" title="Scroll to top" onclick="scrollToTop();">
+        <span class="seal-initials">GB</span>
+        <span class="seal-arrow">↑</span>
+    </button>
+
+    <script src="script.js?v=20261029_1410"></script>
+</body>
+</html>
