@@ -4,12 +4,26 @@
 
 // 1. GLOBAL LIGHTBOX GALLERY DATA
 const GALLERY_ITEMS = [
+    { src: 'assets/ganya_black_dress_lobby.jpg', caption: 'Ganya Bhatti — Creative Storytelling & Leadership' },
+    { src: 'assets/ganya_pachamama_volunteer.jpg', caption: 'Ganya Bhatti — Volunteer at Pachamama Alliance 30th Anniversary' },
+    { src: 'assets/ganya_aacsb_certificate.jpg', caption: 'SFSU Lam Family College of Business — AACSB Committee Certificate of Recognition' },
+    { src: 'assets/ganya_aucip_letter.jpg', caption: 'SFSU Division of International Education — AUCIP Appointment & Recognition Letter' },
+    { src: 'assets/ganya_alli_awards.jpg', caption: 'Ganya Bhatti — 2024-2025 Alli\'s Awards Ceremony' },
+    { src: 'assets/ganya_panel_pachamama.jpg', caption: 'Ganya Bhatti — Community Leadership at Pachamama Alliance Event' },
+    { src: 'assets/ganya_panel_saree.jpg', caption: 'Ganya Bhatti — Traditional Black Saree & Celebration' },
+    { src: 'assets/ganya_panel_dress.jpg', caption: 'Ganya Bhatti — Evening Portrait in Black Cowl Dress' },
+    { src: 'assets/ganya_panel_skyline.jpg', caption: 'Ganya Bhatti — San Francisco City Skyline & Dolores Park' },
+    { src: 'assets/ganya_sunny_beach.jpg', caption: 'Ganya Bhatti — Sunny Ocean Beach Portrait in Blue Floral Top' },
+    { src: 'assets/ganya_film_beach.jpg', caption: 'Ganya Bhatti — Coastal Portrait at the Beach' },
+    { src: 'assets/ganya_film_cafe.jpg', caption: 'Ganya Bhatti — Study & Cafe Work Session' },
+    { src: 'assets/ganya_film_lobby.jpg', caption: 'Ganya Bhatti — Evening Portrait in Modern Lobby' },
+    { src: 'assets/ganya_film_night.jpg', caption: 'Ganya Bhatti — Night Street Lights & Festival' },
     { src: 'assets/ganya_sunset_hero.jpg', caption: 'Ganya Bhatti — Sunset Sky & Golden Hour (Canva Slide 1)' },
     { src: 'assets/ganya_dress_hero.jpg', caption: 'Ganya Bhatti — Black Glitter Dress Portrait (Canva Slide 2)' },
     { src: 'assets/ganya_jeep_hero.jpg', caption: 'Ganya Bhatti — SFSU Campus Life & White Jeep (Canva Slide 11)' },
     { src: 'assets/ganya_coat_hero.jpg', caption: 'Ganya Bhatti — Scenic Nature Walkway Bridge (Canva Slide 11)' },
     { src: 'assets/ganya_whats_in_my_bag.png', caption: "What's In My Bag? — Everyday Essentials by Ganya Bhatti" },
-    { src: 'assets/ganya_flyers_posters.png', caption: 'Flyers & Event Posters Gallery (10 Real Campaigns) — Ganya Bhatti' },
+    { src: 'assets/ganya_flyers_posters.png?v=20261120_revamped_collage', caption: 'Flyers & Event Posters Gallery (10 Real Campaigns) — Ganya Bhatti' },
     { src: 'assets/ganya_short_videos_1.png', caption: 'Short Videos & Reels Part 1: Campus Campaigns & Community — Ganya Bhatti' },
     { src: 'assets/ganya_short_videos_2.png', caption: 'Short Videos & Reels Part 2: Campus Life & Outdoor Leadership — Ganya Bhatti' },
     { src: 'assets/ganya_experience_p1.png', caption: 'Professional Experience Dossier — Part 1' },
@@ -25,10 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTopButton();
     initActiveNavScroll();
     initExperienceFilters();
+    initProjectFilters();
     initDraggableStickers();
     init3DCardTilt();
-    initCorkboardNotes();
-    initReactionCounters();
     initConfettiEngine();
 });
 
@@ -227,7 +240,7 @@ function snapCameraPhoto(e) {
     }
 
     // 4. Pop-up Toast
-    showToast('📸 Snap! Memory saved to Ganya\'s digital scrapbook! ✨');
+    showToast(' Snap! Memory saved to Ganya\'s digital scrapbook! ');
 
     // 5. Confetti celebration
     if (window.fireConfetti) {
@@ -402,179 +415,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ==============================================
-// 10. INTERACTIVE SCRAPBOOK GUESTBOOK & CORKBOARD
-// ==============================================
-const DEFAULT_NOTES = [
-    {
-        name: 'AS Event Committee',
-        message: 'Ganya\'s energy in marketing meetings is unmatched! Loved collaborating on the Holi celebration & AS elections. 🌟',
-        color: 'yellow',
-        date: 'Recent'
-    },
-    {
-        name: 'Decision Science Peer',
-        message: 'The Dubai Real Estate data dossier was so thorough. Ganya connects data models to real business strategies effortlessly! 📊',
-        color: 'blue',
-        date: 'Recent'
-    },
-    {
-        name: 'LFCoB Ambassador Circle',
-        message: 'A true leader representing the College of Business with passion, empathy and authentic student connection! 🎓',
-        color: 'pink',
-        date: 'Recent'
-    },
-    {
-        name: 'Campus Rec Outdoor Lead',
-        message: 'Point Reyes backpacking with Ganya was unforgettable! Best camp vibes and leadership. 🌲⛺',
-        color: 'green',
-        date: 'Recent'
-    }
-];
 
-function initCorkboardNotes() {
-    const board = document.getElementById('corkboard-notes-board');
-    if (!board) return;
-
-    // Load from localStorage or use defaults
-    let notes = [];
-    try {
-        const stored = localStorage.getItem('ganya_scrapbook_notes');
-        if (stored) notes = JSON.parse(stored);
-    } catch (err) {}
-
-    if (!notes || notes.length === 0) {
-        notes = DEFAULT_NOTES;
-        try {
-            localStorage.setItem('ganya_scrapbook_notes', JSON.stringify(notes));
-        } catch (err) {}
-    }
-
-    renderCorkboardNotes(notes);
-}
-
-function renderCorkboardNotes(notes) {
-    const board = document.getElementById('corkboard-notes-board');
-    if (!board) return;
-    board.innerHTML = '';
-
-    const colorMap = {
-        yellow: '#fff59d',
-        pink: '#ffcdd2',
-        blue: '#b3e5fc',
-        green: '#c8e6c9'
-    };
-
-    notes.forEach((note, index) => {
-        const rot = ((index % 5) - 2) * 2.2;
-        const noteEl = document.createElement('div');
-        noteEl.className = 'scrapbook-note';
-        noteEl.style.backgroundColor = colorMap[note.color] || '#fff59d';
-        noteEl.style.transform = `rotate(${rot}deg)`;
-
-        noteEl.innerHTML = `
-            <span class="pushpin">📌</span>
-            <p class="scrapbook-note-text">"${escapeHtml(note.message)}"</p>
-            <div class="scrapbook-note-footer">
-                <strong>— ${escapeHtml(note.name)}</strong>
-                <span>${escapeHtml(note.date || 'Recent')}</span>
-            </div>
-        `;
-        board.appendChild(noteEl);
-    });
-}
-
-function selectNoteColor(color, btn) {
-    selectedNoteColor = color;
-    document.querySelectorAll('.color-dot').forEach(dot => dot.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-}
-
-function pinNewNote() {
-    const nameInput = document.getElementById('visitor-name');
-    const msgInput = document.getElementById('visitor-message');
-    if (!nameInput || !msgInput) return;
-
-    const name = nameInput.value.trim();
-    const message = msgInput.value.trim();
-
-    if (!name || !message) {
-        showToast('Please enter both your name and note to pin it! 📌');
-        return;
-    }
-
-    const newNote = {
-        name,
-        message,
-        color: selectedNoteColor,
-        date: 'Just now'
-    };
-
-    let notes = [];
-    try {
-        const stored = localStorage.getItem('ganya_scrapbook_notes');
-        if (stored) notes = JSON.parse(stored);
-    } catch (err) {}
-
-    notes.unshift(newNote);
-
-    try {
-        localStorage.setItem('ganya_scrapbook_notes', JSON.stringify(notes));
-    } catch (err) {}
-
-    renderCorkboardNotes(notes);
-    nameInput.value = '';
-    msgInput.value = '';
-
-    showToast('📌 Note pinned to Ganya\'s scrapbook! Thank you!');
-
-    // Fire Confetti
-    if (window.fireConfetti) {
-        window.fireConfetti(window.innerWidth / 2, window.innerHeight / 2, 60);
-    }
-}
-
-// ==============================================
-// 11. LIVE EMOJI REACTIONS
-// ==============================================
-function initReactionCounters() {
-    ['romanticize', 'data', 'leader', 'storyteller'].forEach(type => {
-        const el = document.getElementById(`count-${type}`);
-        if (!el) return;
-        try {
-            const val = localStorage.getItem(`reaction_${type}`);
-            if (val) el.textContent = val;
-        } catch (err) {}
-    });
-}
-
-function sendReaction(type, btnElement) {
-    const countEl = document.getElementById(`count-${type}`);
-    if (!countEl) return;
-
-    let current = parseInt(countEl.textContent, 10) || 100;
-    current += 1;
-    countEl.textContent = current;
-
-    try {
-        localStorage.setItem(`reaction_${type}`, current);
-    } catch (err) {}
-
-    // Button pulse
-    if (btnElement) {
-        btnElement.style.transform = 'scale(1.12) translateY(-4px)';
-        setTimeout(() => {
-            btnElement.style.transform = '';
-        }, 200);
-    }
-
-    showToast('✨ Thank you for the positive energy!');
-
-    // Fire confetti from button location
-    if (window.fireConfetti && btnElement) {
-        const rect = btnElement.getBoundingClientRect();
-        window.fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2, 35);
-    }
-}
 
 // ==============================================
 // 12. LIGHTWEIGHT CANVAS CONFETTI ENGINE
@@ -593,7 +434,7 @@ function initConfettiEngine() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    const colors = ['#8B231D', '#e63946', '#f4a261', '#e9c46a', '#2a9d8f', '#ffcdd2', '#b3e5fc'];
+    const colors = ['#38BDF8', '#90CAF9', '#f4a261', '#e9c46a', '#2a9d8f', '#ffcdd2', '#b3e5fc'];
 
     class ConfettiParticle {
         constructor(x, y) {
@@ -731,4 +572,62 @@ function escapeHtml(str) {
         "'": '&#39;',
         '"': '&quot;'
     }[tag] || tag));
+}
+
+
+// OPT Modal handlers
+function openOptModal() {
+    const modal = document.getElementById('opt-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+function closeOptModal() {
+    const modal = document.getElementById('opt-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+// Listen for Escape key on OPT modal
+window.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeOptModal();
+    }
+});
+
+
+// ==============================================
+// PROJECTS CATEGORY FILTER (Divided like Experience)
+// ==============================================
+function initProjectFilters() {
+    const filterButtons = document.querySelectorAll('.projects-filter-tabs .filter-btn');
+    const projItems = document.querySelectorAll('.project-filterable-item');
+    if (!filterButtons.length) return;
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-proj-filter');
+
+            projItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-proj-category') === filter) {
+                    item.style.display = item.classList.contains('video-spotlight-card') ? 'block' : 'flex';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 20);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 200);
+                }
+            });
+        });
+    });
 }
