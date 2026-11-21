@@ -30,11 +30,23 @@ const GALLERY_ITEMS = [
     { src: 'assets/ganya_whats_in_my_bag.png', caption: "What's In My Bag? — Everyday Essentials by Ganya Bhatti" },
     { src: 'assets/ganya_flyers_posters.png?v=20261120_revamped_collage', caption: 'Flyers & Event Posters Gallery (10 Real Campaigns) — Ganya Bhatti' },
     { src: 'assets/flyer_gb_overseas.jpg', caption: 'GB Overseas — UAE Property Investment Marketing Flyer Designed by Ganya Bhatti' },
+    { src: 'assets/project_marketing_content_portfolio.jpg', caption: 'Marketing Content Portfolio — Digital Design & Visual Identity Assets Designed by Ganya Bhatti' },
+    { src: 'assets/project_feb_newsletter.jpg', caption: 'February Residence Life Community Newsletter — Designed by RA Ganya & RA Hannah' },
+    { src: 'assets/project_retail_cafes.jpg', caption: 'Brewing Brand Loyalty: The Marketing Strategy Behind Retail Cafés — Case Study by Ganya Bhatti, Livia Williams, Elizabeth Sandoval, Jessie Fisher' },
+    { src: 'assets/project_moonchem.jpg', caption: 'MoonChem: Supply Chain Logistics & Inventory Strategy — Case Study by Ganya Bhatti, Kevin Tran, Estrella Hernandez, Jimin Pyo, Miti Nakrani' },
+    { src: 'assets/project_velox_carbon.jpg', caption: 'Velox Carbon: Year 2 Strategic Marketing Plan — Ganya Bhatti (VP of Brand & Sales Management)' },
+    { src: 'assets/project_hubspot.jpg', caption: 'HubSpot & Ritual Coffee: CRM Automation & Lifecycle Retention Case Study — Ganya Bhatti et al.' },
+    { src: 'assets/project_sf_monorail.jpg', caption: 'San Francisco Monorail Proposal — Business 300 Rail Inc. (Ganya Bhatti et al.)' },
+    { src: 'assets/project_business_ethics.jpg', caption: 'Business Ethics: Making Decisions When It Actually Matters — Group 1 (Ganya Bhatti, Sean Dutton, Tristen Tunsen-Perez, Juan Zelaya)' },
+    { src: 'assets/project_dubai_real_estate.jpg', caption: 'Discovering Dubai: Real Estate Market — The 4Ps Marketing Strategy by Ganya Bhatti' },
+    { src: 'assets/project_mktg567_internship.jpg', caption: 'MKTG 567: Digital Marketing Assistant Internship Dossier — Ganya Bhatti (SFSU Lam Family College of Business)' },
+    { src: 'assets/project_two_centuries_magazine.jpg', caption: 'Two Centuries of Power: Black Women\'s 200-Year Fight for the Vote — Magazine Publication by Ganya Bhatti' },
     { src: 'assets/ganya_short_videos_1.png', caption: 'Short Videos & Reels Part 1: Campus Campaigns & Community — Ganya Bhatti' },
     { src: 'assets/ganya_short_videos_2.png', caption: 'Short Videos & Reels Part 2: Campus Life & Outdoor Leadership — Ganya Bhatti' },
     { src: 'assets/ganya_experience_p1.png', caption: 'Professional Experience Dossier — Part 1' },
     { src: 'assets/ganya_experience_p2.png', caption: 'Professional Experience Dossier — Part 2' },
-    { src: 'assets/ganya_certifications_slide.png', caption: 'Verified Credentials & Academic Recognition — SFSU' }
+    { src: 'assets/ganya_certifications_slide.png', caption: 'Verified Credentials & Academic Recognition — SFSU' },
+    { src: 'assets/ganya_manny_mashouf_scholarship.jpg', caption: 'Manny Mashouf Endowed Scholarship in Marketing — Official Award Letter, San Francisco State University, Spring 2027' }
 ];
 
 let currentLightboxIndex = 0;
@@ -618,9 +630,33 @@ function initProjectFilters() {
             button.classList.add('active');
 
             const filter = button.getAttribute('data-proj-filter');
+            const container = document.querySelector('.projects-container');
+            const moreBar = document.querySelector('.projects-more-bar');
+            const lessBar = document.querySelector('.projects-less-bar');
+
+            if (filter !== 'all') {
+                if (moreBar) moreBar.style.display = 'none';
+                if (lessBar) lessBar.style.display = 'none';
+            } else {
+                if (moreBar) moreBar.style.display = '';
+                if (lessBar) lessBar.style.display = '';
+            }
 
             projItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-proj-category') === filter) {
+                if (filter === 'all') {
+                    const isExtra = item.classList.contains('is-extra-project');
+                    const isExpanded = container && container.classList.contains('is-expanded');
+                    if (isExtra && !isExpanded) {
+                        item.style.display = 'none';
+                        item.style.opacity = '0';
+                    } else {
+                        item.style.display = item.classList.contains('video-spotlight-card') ? 'block' : 'flex';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 20);
+                    }
+                } else if (item.getAttribute('data-proj-category') === filter) {
                     item.style.display = item.classList.contains('video-spotlight-card') ? 'block' : 'flex';
                     setTimeout(() => {
                         item.style.opacity = '1';
@@ -636,6 +672,34 @@ function initProjectFilters() {
             });
         });
     });
+}
+
+function toggleProjectsExpand(expand) {
+    const container = document.querySelector('.projects-container');
+    if (!container) return;
+
+    if (expand) {
+        container.classList.add('is-expanded');
+        const extraProjects = container.querySelectorAll('.project-card.is-extra-project');
+        extraProjects.forEach(item => {
+            item.style.display = 'flex';
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 20);
+        });
+    } else {
+        container.classList.remove('is-expanded');
+        const extraProjects = container.querySelectorAll('.project-card.is-extra-project');
+        extraProjects.forEach(item => {
+            item.style.display = 'none';
+            item.style.opacity = '0';
+        });
+        const projectsGrid = document.querySelector('.projects-grid');
+        if (projectsGrid) {
+            projectsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
 }
 
 // ==============================================
