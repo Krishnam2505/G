@@ -5,11 +5,11 @@
 // 1. GLOBAL LIGHTBOX GALLERY DATA
 const GALLERY_ITEMS = [
     { src: 'assets/ganya_black_dress_lobby.jpg', caption: 'Ganya Bhatti — Creative Storytelling & Leadership' },
-    { src: 'assets/ganya_pachamama_volunteer.jpg', caption: 'Ganya Bhatti — Volunteer at Pachamama Alliance 30th Anniversary' },
+    { src: 'assets/ganya_pachamama_volunteer.jpg?v=zoomed', caption: 'Ganya Bhatti — Volunteer at Pachamama Alliance 30th Anniversary' },
     { src: 'assets/ganya_aacsb_certificate.jpg', caption: 'SFSU Lam Family College of Business — AACSB Committee Certificate of Recognition' },
     { src: 'assets/ganya_aucip_letter.jpg', caption: 'SFSU Division of International Education — AUCIP Appointment & Recognition Letter' },
     { src: 'assets/ganya_alli_awards.jpg', caption: 'Ganya Bhatti — 2024-2025 Alli\'s Awards Ceremony' },
-    { src: 'assets/ganya_panel_pachamama.jpg', caption: 'Ganya Bhatti — Community Leadership at Pachamama Alliance Event' },
+    { src: 'assets/ganya_panel_pachamama.jpg?v=zoomed', caption: 'Ganya Bhatti — Community Leadership at Pachamama Alliance Event' },
     { src: 'assets/ganya_panel_saree.jpg', caption: 'Ganya Bhatti — Traditional Black Saree & Celebration' },
     { src: 'assets/ganya_panel_dress.jpg', caption: 'Ganya Bhatti — Evening Portrait in Black Cowl Dress' },
     { src: 'assets/ganya_panel_skyline.jpg', caption: 'Ganya Bhatti — San Francisco City Skyline & Dolores Park' },
