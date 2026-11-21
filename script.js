@@ -18,6 +18,11 @@ const GALLERY_ITEMS = [
     { src: 'assets/ganya_film_cafe.jpg', caption: 'Ganya Bhatti — Study & Cafe Work Session' },
     { src: 'assets/ganya_film_lobby.jpg', caption: 'Ganya Bhatti — Evening Portrait in Modern Lobby' },
     { src: 'assets/ganya_film_night.jpg', caption: 'Ganya Bhatti — Night Street Lights & Festival' },
+    { src: 'assets/ganya_sunny_beach.jpg', caption: 'Ganya Bhatti — Sunny Ocean Beach Portrait in Blue Floral Top' },
+    { src: 'assets/ganya_film_beach.jpg', caption: 'Ganya Bhatti — Coastal Portrait at the Beach' },
+    { src: 'assets/ganya_film_cafe.jpg', caption: 'Ganya Bhatti — Study & Cafe Work Session' },
+    { src: 'assets/ganya_film_lobby.jpg', caption: 'Ganya Bhatti — Evening Portrait in Modern Lobby' },
+    { src: 'assets/ganya_film_night.jpg', caption: 'Ganya Bhatti — Night Street Lights & Festival' },
     { src: 'assets/ganya_sunset_hero.jpg', caption: 'Ganya Bhatti — Sunset Sky & Golden Hour (Canva Slide 1)' },
     { src: 'assets/ganya_dress_hero.jpg', caption: 'Ganya Bhatti — Black Glitter Dress Portrait (Canva Slide 2)' },
     { src: 'assets/ganya_jeep_hero.jpg', caption: 'Ganya Bhatti — SFSU Campus Life & White Jeep (Canva Slide 11)' },
@@ -591,7 +596,7 @@ function closeOptModal() {
     }
 }
 // Listen for Escape key on OPT modal
-window.addEventListener('keydown', function(e) {
+window.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         closeOptModal();
     }
@@ -631,3 +636,100 @@ function initProjectFilters() {
         });
     });
 }
+
+// ==============================================
+// SHORT REELS VIDEO PLAY / PAUSE CONTROLS
+// ==============================================
+function toggleReelVideo(frameEl) {
+    if (!frameEl) return;
+    const video = frameEl.querySelector('video');
+    const playBtn = frameEl.querySelector('.reel-play-overlay');
+    const card = frameEl.closest('.vertical-reel-card');
+    const actionBtn = card?.querySelector('.reel-action-btn');
+
+    if (video && (video.src || video.querySelector('source') || video.currentSrc)) {
+        if (video.paused) {
+            // Pause any other playing reel videos to prevent audio clash
+            document.querySelectorAll('.phone-mockup-frame video').forEach(v => {
+                if (v !== video && !v.paused) {
+                    v.pause();
+                    const parent = v.closest('.phone-mockup-frame');
+                    if (parent) {
+                        parent.classList.remove('is-playing');
+                        const btn = parent.querySelector('.reel-play-overlay');
+                        if (btn) btn.setAttribute('aria-label', 'Play');
+                    }
+                }
+            });
+
+            video.play().then(() => {
+                frameEl.classList.add('is-playing');
+                if (playBtn) playBtn.setAttribute('aria-label', 'Pause');
+            }).catch(() => {
+                // Retry muted if browser policy blocked unmuted playback
+                video.muted = true;
+                const soundBtn = frameEl.querySelector('.reel-sound-btn');
+                if (soundBtn) soundBtn.textContent = 'Unmute';
+                video.play().then(() => {
+                    frameEl.classList.add('is-playing');
+                    if (playBtn) playBtn.setAttribute('aria-label', 'Pause');
+                }).catch(() => {
+                    if (actionBtn && actionBtn.href && !actionBtn.href.endsWith('#')) {
+                        window.open(actionBtn.href, '_blank', 'noopener,noreferrer');
+                    }
+                });
+            });
+        } else {
+            video.pause();
+            frameEl.classList.remove('is-playing');
+            if (playBtn) playBtn.setAttribute('aria-label', 'Play');
+        }
+    } else {
+        if (actionBtn && actionBtn.href && !actionBtn.href.endsWith('#')) {
+            window.open(actionBtn.href, '_blank', 'noopener,noreferrer');
+        } else {
+            showToast('Video file incoming! Send the MP4 file to play inline.');
+        }
+    }
+}
+
+function toggleReelSound(event, btnEl) {
+    if (event) event.stopPropagation();
+    const frameEl = btnEl?.closest('.phone-mockup-frame');
+    const video = frameEl?.querySelector('video');
+    if (!video) return;
+
+    video.muted = !video.muted;
+    btnEl.textContent = video.muted ? 'Unmute' : 'Mute';
+}
+
+function toggleReelsExpand(expand) {
+    const container = document.querySelector('.reels-container');
+    if (!container) return;
+
+    if (expand) {
+        container.classList.add('is-expanded');
+    } else {
+        // Pause any extra videos currently playing to prevent background audio clash
+        const extraVideos = container.querySelectorAll('.vertical-reel-card.is-extra-reel video');
+        extraVideos.forEach(v => {
+            if (!v.paused) {
+                v.pause();
+                const frame = v.closest('.phone-mockup-frame');
+                if (frame) {
+                    frame.classList.remove('is-playing');
+                    const playBtn = frame.querySelector('.reel-play-overlay');
+                    if (playBtn) playBtn.setAttribute('aria-label', 'Play');
+                }
+            }
+        });
+
+        container.classList.remove('is-expanded');
+        const reelsSection = document.getElementById('reels');
+        if (reelsSection) {
+            reelsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+}
+
+

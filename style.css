@@ -3226,6 +3226,16 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
+}
+.phone-mockup-frame video,
+.phone-mockup-frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .phone-notch {
     position: absolute;
@@ -3240,11 +3250,51 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 .phone-reel-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     filter: brightness(0.92);
     transition: transform 0.4s ease, filter 0.3s ease;
+}
+.phone-reel-video {
+    display: block;
+    cursor: pointer;
+    background: #0f172a;
+}
+.reel-sound-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    z-index: 12;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.reel-sound-btn:hover {
+    background: #0284C7;
+    transform: scale(1.05);
+}
+.phone-mockup-frame.is-playing .reel-play-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.85);
+}
+.phone-mockup-frame.is-playing:hover .reel-play-overlay {
+    opacity: 0.95;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1.1);
+    background: rgba(15, 23, 42, 0.88);
+}
+.phone-mockup-frame.is-playing .reel-icon-play {
+    display: none !important;
+}
+.phone-mockup-frame.is-playing .reel-icon-pause {
+    display: block !important;
 }
 .vertical-reel-card:hover .phone-reel-thumb {
     transform: scale(1.05);
@@ -3255,23 +3305,36 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 58px;
-    height: 58px;
-    background: rgba(56, 189, 248, 0.92);
-    border: 2px solid #ffffff;
+    width: 62px;
+    height: 62px;
+    background: rgba(2, 132, 199, 0.92);
+    border: 2.5px solid #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    font-size: 1.4rem;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
     transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 5;
+    cursor: pointer;
 }
 .vertical-reel-card:hover .reel-play-overlay {
-    transform: translate(-50%, -50%) scale(1.18);
+    transform: translate(-50%, -50%) scale(1.15);
     background: #0284C7;
+    box-shadow: 0 10px 28px rgba(2, 132, 199, 0.5);
+}
+.reel-play-overlay svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
+    pointer-events: none;
+}
+.reel-icon-play {
+    margin-left: 3px;
+    display: block;
+}
+.reel-icon-pause {
+    display: none;
 }
 .reel-duration-badge {
     position: absolute;
@@ -3337,6 +3400,61 @@ body {
     background: #0284C7;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+/* REELS VIEW MORE / VIEW LESS TOGGLE */
+.reels-container:not(.is-expanded) .vertical-reel-card.is-extra-reel {
+    display: none !important;
+}
+.reels-container:not(.is-expanded) .reels-less-bar {
+    display: none !important;
+}
+.reels-container.is-expanded .reels-more-bar {
+    display: none !important;
+}
+.reels-container.is-expanded .vertical-reel-card.is-extra-reel {
+    display: flex;
+    animation: reelFadeIn 0.35s ease forwards;
+}
+@keyframes reelFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reels-actions-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.reels-toggle-btn {
+    background: #ffffff;
+    color: #0284C7;
+    border: 2px solid #38BDF8;
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 13px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.18);
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.reels-toggle-btn:hover {
+    background: #0284C7;
+    color: #ffffff;
+    border-color: #0284C7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.3);
 }
 
 
