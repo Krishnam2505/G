@@ -29,6 +29,7 @@ const GALLERY_ITEMS = [
     { src: 'assets/ganya_coat_hero.jpg', caption: 'Ganya Bhatti — Scenic Nature Walkway Bridge (Canva Slide 11)' },
     { src: 'assets/ganya_whats_in_my_bag.png', caption: "What's In My Bag? — Everyday Essentials by Ganya Bhatti" },
     { src: 'assets/ganya_flyers_posters.png?v=20261120_revamped_collage', caption: 'Flyers & Event Posters Gallery (10 Real Campaigns) — Ganya Bhatti' },
+    { src: 'assets/flyer_gb_overseas.jpg', caption: 'GB Overseas — UAE Property Investment Marketing Flyer Designed by Ganya Bhatti' },
     { src: 'assets/ganya_short_videos_1.png', caption: 'Short Videos & Reels Part 1: Campus Campaigns & Community — Ganya Bhatti' },
     { src: 'assets/ganya_short_videos_2.png', caption: 'Short Videos & Reels Part 2: Campus Life & Outdoor Leadership — Ganya Bhatti' },
     { src: 'assets/ganya_experience_p1.png', caption: 'Professional Experience Dossier — Part 1' },
